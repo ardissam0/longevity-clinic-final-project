@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html land="en">
+<head>
+    <title>The Longevity Clinic</title>
+    <!-- 
+    Final Draft
+    Filename: contact.html 
+    Author: Samuel Ardis
+    Date: 11/11/2021
+    HTML5 and CSS3 Illustrated Unit A, Final Draft
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="modernizr.custom.62074.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1><a href="index.html">The Longevity Clinic</a></h1>
+            </div>
+              <div>
+                <a href="index.html"><button>HOME</button></a>
+                <a href="about.html"><button>ABOUT</button></a>
+                <a href="calories.html"><button>BMI</button></a>
+                <a href="contact.html"><button>CONTACT</button></a>
+                <a href="cart.html"><button class="cart">
+                    <ion-icon name="cart-outline" class="cart-icon"></ion-icon><span>0</span>
+                </button></a>
+            </div>
+        </header>
+        <div class="wrapper-color-switch">
+            <input type="checkbox" id="input-color-switch">
+            <label for="input-color-switch" class="color-switch">
+              <div class="color-switch-toggle"></div>
+            </label>
+          </div>
+        <hr>
+        <article>
+            <section>
+                <h2 id="tablestart">Availabilty<ion-icon name="time" class="contactIcon"></ion-icon></h2>
+            <table>
+                <container>
+                    <colgroup>
+                        <col span="1" class="table-heading-column">
+                        <col span="2" class="table-data-columns">
+                    </colgroup>
+                </container>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Day</th>
+                        <th colspan="2">Hours</th>
+                    </tr>
+                    <tr>
+                        <th>Open</th>
+                        <th>Close</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mon-Thu</td>
+                        <td>9am</td>
+                        <td>8pm</td>
+                        <!-- <td>10pm</td> -->
+                    </tr>
+                    <tr>
+                        <td>Fri-Sat</td>
+                        <td>10am</td>
+                        <td>6pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sun</td>
+                        <td>Noon</td>
+                        <td>5pm</td>
+                    </tr>
+                </tbody>
+            </table>
+            </section>
+            <h2 id="contentstart">Contact Us<ion-icon name="chatbubble-ellipses" class="contactIcon"></ion-icon></h2>
+            <form action="results.html">
+                <fieldset class="deliveryInfo">
+                    <legend>Contact Information</legend>
+                </fieldset>
+                <fieldset class="contactInfo">
+                    <div class="contactInfoFlex">
+                        <div>
+                        <label for="nameinput">Name</label>
+                        <input type="text" name="name" id="nameinput" placeholder="First and Last name">
+                        </div>
+                        <div>
+                        <label for="cityinput">City</label>
+                        <input type="text" name="city" id="cityinput">
+                        </div>
+                        <div>
+                        <label for="emailinput">Email</label>
+                        <input type="email" name="email" id="emailinput" placeholder="address@example.com">
+                        </div>
+                        <div>
+                        <label for="phoneinput">Phone</label>
+                        <input type="tel" name="phone" id="phoneinput">
+                        </div>
+                    </div>
+                    <fieldset class="purposeInfo">
+                        <legend>Purpose</legend>
+                        <label id="inquiry"><input type="radio" id="inquiry" name="inquiry" value="Business Inquiry">Business Inquiry</label>
+                        <label id="other"><input type="radio" id="other" name="inquiry" value="Other Inquiry" checked>Other</label>
+                    </fieldset>
+                </fieldset>
+                <fieldset class="messageInfo">
+                    <legend>Message</legend>
+                    <textarea type="text" name="message" id="message" rows="8" cols="50"></textarea>
+                </fieldset>
+                <fieldset class="submitbutton">
+                    <input type="submit" id="submit" value="Send">
+                </fieldset>
+            </form>
+            <h2 class="map-title">Find Us<ion-icon name="location" class="contactIcon"></ion-icon></h2>
+            <section class="responsive-iframe">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3187.5497468774033!2d-122.03554548485023!3d36.972808879913316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e402bf08db67f%3A0x49442711a4df1591!2s123%20Grover%20Ln%2C%20Santa%20Cruz%2C%20CA%2095060!5e0!3m2!1sen!2sus!4v1636688156215!5m2!1sen!2sus" 
+                width="100%" height="100%" style="position:absolute; left:0; bottom:0; top:0; right:0; border:none;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+         </article>
+         <footer>
+            <p><ion-icon name="location" class="footer-icon"></ion-icon>123 Grover St. <br/> Los Angeles, CA</p>
+            <div class="phone-div"><p><ion-icon name="call" class="footer-icon"></ion-icon> (800) 555-0123</p></div>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> The Longevity Clinic</p>
+        </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="store.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+
+</html>

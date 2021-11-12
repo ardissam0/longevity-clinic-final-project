@@ -1,0 +1,821 @@
+/* 
+   Filename: styles.css
+   Author: Samuel Ardis
+   Date: 11/11/2021
+   HTML5 and CSS3 Illustrated, Final Draft
+ */
+
+/* Ideas for Final: 
+- Add shopping cart functionality using HTML, CSS, and JS. 
+          --DONE! with basic functionality/Cannot delete/Edit/Purchase! 
+- Add google maps functionality to find address of imaginary company.
+                ---DONE!!!
+- Add Login/Logout functionality to website for members.
+
+- Implement dark mode toggle functionality. 
+          --DONE! with basic functionality/Page doesn't remember upon refresh!
+- Add a sample page where you can get a generic workout regimen, nutrition plan, etc.
+
+- Add a page where you can calculate your BMI, caloric needs, etc. 
+          --DONE! Added BMI calculator, 
+- Add hover description functionality for products. 
+                ---DONE!!!
+- Redo color scheme.
+          --DONE!! I like it for now.
+- Make completely mobile friendly.
+          --DONE! Going to continue making all additions mobile friendly.
+*/
+
+@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+ /* reset style */
+ a, article, body, div, figcaption, figure, footer, header, h1, 
+ h2, h3, img, li, nav, p, section, ol, ul, fieldset, form, legend, 
+ input, label, textarea, option, select, dl, dt, dd, table, thead, 
+ tbody, th, td, span {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+a {
+  text-decoration: none;
+}
+
+/*lightmode */
+:root {
+  --clr-background: #ffffff;
+  --clr-font: #000000;
+  --clr-primary: #C97D60;
+  --clr-secondary: #655A7C;
+}
+
+/* darkmode */
+.dark-mode {
+  --clr-background: #000000;
+  --clr-font: #ffffff;
+  --clr-primary: #655A7C;
+  --clr-secondary: #C97D60;
+}
+
+/* body and page container */
+.container {
+  background-color: var(--clr-background);
+  color: var(--clr-font);
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* headings */
+header {
+  background-color: var(--clr-primary);
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  top: 0;
+  display: flex; 
+}
+header div {
+  color: var(--clr-font);
+  width: 70%;
+  margin: 0 auto 0.8em;
+}
+header h1{
+  padding-top: 10px;
+}
+header h1 a{
+  padding-top: 10px;
+  color: var(--clr-font);;
+}
+header button {
+  background-color: var(--clr-primary);
+  color: var(--clr-font);
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+header button:hover {
+  background-color: var(--clr-background);
+  color: var(--clr-font);
+}
+header button a {
+  text-decoration: none;
+  color: var(--clr-font);
+}
+@media(max-width: 650px) {
+  header {
+    flex-direction: column;
+  }
+  header button {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: var(--clr-background);
+  }
+}
+
+/* container that holds the switch */
+.wrapper-color-switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 35px 50px 35px 0px;
+}
+/* label for switch that is interactive */
+.color-switch {
+  width: 4em;
+  height: 2em;
+  border-radius: 10em;
+  background: var(--clr-background);
+  border: 2px solid var(--clr-font);
+  position: absolute;
+  cursor: pointer;
+}
+/* circle toggle that animates backward and forward */
+.color-switch-toggle {
+  width: 1.6em;
+  height: 1.6em;
+  background: var(--clr-font);
+  position: absolute;
+  border-radius: 10em;
+  top: 0.2em;
+  left: 0.2em;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+/* text label that indicates switch state
+light by default */
+.color-switch::before {
+  font-size: 2.2em;
+  content: "\f4b7";
+  font-family: "Ionicons";
+  position: absolute;
+  display: inline-block;
+  right: 2.1em;
+  bottom: -0.1em;
+}
+/* animate circle toggle if switch is on */
+#input-color-switch:checked ~ label .color-switch-toggle {
+  transform: translatex(2em);
+}
+/* change text of before if switch is on */
+#input-color-switch:checked ~ .color-switch::before {
+  content: "\f468";
+  font-family: "Ionicons";
+}
+/* hide input */
+#input-color-switch {
+  display: none;
+}
+@media(max-width: 800px) {
+  .wrapper-color-switch {
+    margin: 30px auto 30px 10px;
+    justify-content: center;
+  }
+}
+
+/* ion icons */
+ion-icon {
+  font-size: 2.25em;
+  margin: 10px auto;
+  margin-bottom: .2em;
+}
+.contactIcon {
+  font-size: 1em;
+}
+.socialIcon {
+  font-size: 2.75em;
+}
+.teamIcon {
+  font-size: 7em;
+}
+.cart-icon {
+  font-size: 1.1em;
+}
+.footer-icon {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* main content */
+article {
+  color: var(--clr-font);
+  background-color: var(--clr-background);
+  text-align: left;
+  width: 75%;
+  margin: 0 auto;
+  padding: 3em 1em 1em 1em;
+}
+section {
+  color: var(--clr-font);
+  width: 65%;
+  margin: 0 auto;
+  padding: 3em 1em 1em 1em;
+  text-align: left;
+}
+article h2, section h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+article h3, section h3 {
+  margin-bottom: 3px;
+}
+article p {
+  width: 90%;
+  margin: 0 auto;
+}
+article p, section p {
+  margin-bottom: 10px;
+}
+section .about_p {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+section .section-0 {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+section .section-0 div{
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin: 30px;
+  width: 180px;
+  color: var(--clr-font);
+  border: none;
+  background-color: var(--clr-primary);
+  border-radius: 20px;;
+  text-align: center;
+}
+section .product-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+section .product-items .product-item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  margin: 15px 0 0 15px;
+  color: var(--clr-font);
+  border: none;
+  background-color: var(--clr-primary);
+  border-radius: 10%;
+  text-align: center;
+  position: relative;
+}
+section .product-items .product-item h3{
+  font-size: 1.5em;
+}
+section .product-items .product-item p{
+  font-size: 1.3em;
+}
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2em 0 2em 0;
+}
+ul li {
+  list-style-type: none;
+  text-decoration: underline;
+  font-size: 1.2em;
+  padding: .5em;
+  border-radius: .3em;
+}
+ul li a:hover {
+  color: var(--clr-secondary);
+}
+ul li a {
+  color: var(--clr-primary);
+}
+span {
+  margin-left: 5px;
+}
+
+/* Modal styles */
+.description-modal {
+  color: var(--clr-primary);
+  font-size: 1em;
+  background-color: var(--clr-font);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  width: 55%;
+  padding: 3px 0 3px 0;
+  margin: 20px auto;
+}
+.description-modal:hover {
+  background-color: var(--clr-background);
+}
+.description-modal:active {
+  transform: scale(0.9);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal.active {
+  display: block;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: var(--clr-background);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid var(--clr-primary);
+  border-radius: 10px;
+  width: 30%;
+}
+/* The Close Button */
+.close {
+  color: var(--clr-font);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: var(--clr-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#overlay.active {
+  display: block;
+}
+
+/* main content media queries */
+@media(max-width: 1200px) {
+  section .product-items .product-item {
+    width: 200px;
+    margin: 30px auto;
+  }
+}
+@media(max-width: 1000px) {
+  section {
+    width: 90%;
+  }
+  section .section-0 {
+    flex-direction: column;
+  }
+  section .section-0 div{
+    margin: 20px auto;
+  }
+  .modal-content {
+    margin: 50% auto;
+    text-align: left;
+    width: 75%;
+  }
+}
+
+@media(max-width: 750px) {
+  section {
+    width: 90%;
+  }
+  section .product-items{
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+  }
+  ul {
+    flex-direction: column;
+  }
+  ul li {
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 5% 25% 5% 25%;
+  }
+}
+
+/* product styles */
+.product-item-button {
+  font-size: 2em;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--clr-font);
+  color: var(--clr-primary);
+  cursor: pointer;
+  position: absolute;
+  top: -8%;
+  right: -8%;
+}
+.product-item-button:hover {
+  transform: scale(1.05);
+  transition: .5s;
+  transition-timing-function: ease-in;
+}
+.responsive-iframe {
+  position: relative;
+  overflow: hidden;
+  width: 51%;
+  padding-top: 56.25%;
+  border: 10px solid var(--clr-primary);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+@media(max-width: 800px) {
+  .responsive-iframe {
+    width: 90%;
+    height: 150px;
+  }
+  .container .map-title {
+    margin-top: 30px;
+  }
+}
+
+/* Calculate Page Styles */
+.calc-section {
+  min-height: 100vh;
+}
+#calc-bmi-intro {
+  font-weight: bold;
+  margin: 20px auto;
+  width: 50%;
+}
+.bmi-calc-form {
+  width: 50%;
+  padding: 2%;
+  font-size: 1.15em;
+  background-color: var(--clr-primary);
+  color: var(--clr-font);
+}  
+.bmi-calc-form fieldset {
+  text-align: center;
+}
+.bmi-calc-form fieldset label {
+  font-weight: bold;
+}
+.bmi-calc-form fieldset input {
+  margin-bottom: 10px;
+  font-weight: bold;
+  width: 13%;
+  padding: 1.2%;
+  outline: none;
+  text-align: center;
+}
+.bmi-btn {
+  padding: 2%;
+  color: var(--clr-font);
+  background-color: var(--clr-background);
+  font-weight: bold;
+  border: none;
+  font-size: 1em;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.bmi-calc-form fieldset .bmi-btn:hover {
+  color: var(--clr-background);
+  background-color: var(--clr-font);
+}
+.bmi-calc-form #bmi-health {
+  font-weight: bold;
+  padding: 3%;
+  text-align: left;
+  border: 2px solid var(--clr-background);
+  color: var(--clr-background);
+}
+@media(max-width: 800px) {
+  #calc-bmi-intro {
+    margin: 20px auto;
+    width: 90%;
+  }
+  .bmi-calc-form {
+    width: 90%;
+    padding: 5%;
+  }  
+}
+
+/* Cart styles */
+.cart-container {
+  border: none;
+  padding: 20px;
+  min-height: 100vh;
+}
+.cart-section {
+  width: 50%;
+}
+.cart-header {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.cart-row {
+  display: flex;
+}
+.cart-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.cart-item {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 10px;
+}
+.cart-item span {
+  margin-left: 10%;
+}
+.cart-price {
+  width: 20%;
+  padding: 10px 0;
+  font-size: 1.2em;
+}
+.cart-quantity {
+  padding: 10px 0;
+  width: 30%;
+}
+.basketTotalContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  padding: 10px 0;
+}
+.basketTotalTitle {
+  width: 10%;
+}
+.basketTotal {
+  width: 10%;
+}
+.btn-danger {
+  color: white;
+  background-color: #EB5757;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+}
+.btn-danger:hover {
+  background-color: #CC4C4C;
+}
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
+.cart-row:last-child .cart-column {
+  border: none;
+}
+.btn-purchase {
+  display: block;
+  margin: 40px auto 20px auto;
+  font-size: 1.3em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 1%;
+  background-color: var(--clr-primary);
+  color: var(--clr-background);
+}
+.btn-purchase:hover {
+  background-color: var(--clr-font);
+}
+
+@media(max-width: 800px) {
+  .cart-section {
+    width: 90%;
+  }
+  .cart-header {
+    font-size: .7em;
+  }
+  .cart-item {
+    width: 45%;
+  }
+  .cart-item span {
+    margin-left: 10%;
+  }
+  .cart-price {
+    width: 25%;
+  }
+  .cart-quantity {
+    width: 10%;
+  }
+  .basketTotalContainer {
+    width: 80%;
+  }
+  .basketTotalTitle {
+    width: 50%;
+  }
+  .basketTotal {
+    width: 50%;
+  }
+}
+
+/* form */
+form {
+  color: var(--clr-font);
+  background-color: var(--clr-primary);
+  width: 50%;
+  margin: 0 auto;
+  padding: 3%;
+  margin-bottom: 5%;
+  border-radius: .4em;
+}
+@media(max-width: 800px) {
+  form {
+    width: 100%;
+    padding: 5%;
+  }
+}
+
+/* fieldset styles */
+fieldset {
+  margin-bottom: 1em;
+}
+fieldset fieldset {
+  margin-top: 1em;
+  padding: 0.8em;
+  border: 1px solid var(--clr-primary);
+}
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+.contactInfo .contactInfoFlex {
+  display: flex;
+  flex-direction: column;
+}
+.contactInfo .contactInfoFlex div {
+  display: flex;
+  margin-bottom: .5em;
+}
+legend {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.submitbutton {
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+/* field styles */
+.contactInfo input, textarea {
+  border: 1px solid var(--clr-primary);
+  padding: 0.2em;
+  font-size: 1em;
+  outline: none;
+}
+textarea {
+  width: 99%;
+}
+#nameinput, #addressinput, #emailinput, #cityinput, #phoneinput {
+  width: 20em;
+}
+select {
+  margin-bottom: 0.6em;
+  font-size: 1em;
+}
+#submit {
+  border: none;
+  padding: 0.4em 0.6em;
+  background-color: var(--clr-background);
+  color: var(--clr-font);
+  font-size: 1.25em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* label styles */
+label {
+  font-size: 1em;
+}
+.contactInfo label, .messageInfo legend {
+  display: block;
+  margin: .5em 0;
+}
+.contactInfo .contactInfoFlex div label{
+  display: inline-block;
+  width: 50px;
+}
+.purposeInfo label input {
+  margin-right: .5em;
+}
+.purposeInfo {
+  width: 50%;
+}
+@media(max-width: 1200px) {
+  .contactInfo .contactInfoFlex div {
+    display: flex;
+    flex-direction: column;
+  }
+  #nameinput, #addressinput, #emailinput, #cityinput, #phoneinput {
+    width: 95%;
+  }
+  textarea {
+    width: 95%;
+  }
+}
+
+/* Section */
+section h3{
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/* table styles */
+table {
+  width: 85%;
+  margin: 0 auto;
+  padding: 3%;
+  margin-bottom: 3%;
+}
+th, td {
+  border: 2px solid var(--clr-primary);
+}
+th {
+  padding: 0.1em 0.3em;
+  background-color: var(--clr-primary);
+  color: var(--clr-font);
+}
+td {
+  padding: 0.3em;
+  text-align: left;
+  background-color: var(--clr-background);
+}
+.table-heading-column {
+  background-color: var(--clr-background);
+}
+@media(max-width: 800px) {
+  table {
+    width: 110%;
+  }
+}
+
+/* footer section */
+footer {
+  background-color: var(--clr-primary);
+  color: var(--clr-font);
+  padding-bottom: 1%;;
+  border-top: none;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-top: 3em;
+  display: flex;
+}
+.resultFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  margin: 25px auto;
+  text-align: center;
+}
+@media(max-width: 550px) {
+  footer {
+    flex-direction: column;
+  }
+}
+
+/*About page*/
+.testimonials p {
+  border: none;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: var(--clr-primary);
+  color: var(--clr-font);
+}

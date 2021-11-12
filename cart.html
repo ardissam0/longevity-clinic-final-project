@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html land="en">
+<head>
+    <title>The Longevity Clinic</title>
+    <!-- 
+    Final Draft
+    Filename: cart.html 
+    Author: Samuel Ardis
+    Date: 11/11/2021
+    HTML5 and CSS3 Illustrated Unit A, Final Draft
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="modernizr.custom.62074.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1><a href="index.html">The Longevity Clinic</a></h1>
+            </div>
+              <div>
+                <a href="index.html"><button>HOME</button></a>
+                <a href="about.html"><button>ABOUT</button></a>
+                <a href="calories.html"><button>BMI</button></a>
+                <a href="contact.html"><button>CONTACT</button></a>
+                <a href="cart.html"><button class="cart">
+                    <ion-icon name="cart-outline" class="cart-icon"></ion-icon><span>0</span>
+                </button></a>
+            </div>
+        </header>
+        <div class="wrapper-color-switch">
+            <input type="checkbox" id="input-color-switch">
+            <label for="input-color-switch" class="color-switch">
+              <div class="color-switch-toggle"></div>
+            </label>
+          </div>
+        <hr>
+            <section class="container content-section cart-section">
+                <div class="cart-container">
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">ITEM</span>
+                        <span class="cart-price cart-header cart-column">PRICE</span>
+                        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                    </div>
+                    <div class="cart-items">
+                    </div>
+                    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+                </div>
+            </section>
+            <footer>
+                <p><ion-icon name="location" class="footer-icon"></ion-icon>123 Grover St. <br/> Los Angeles, CA</p>
+                <div class="phone-div"><p><ion-icon name="call" class="footer-icon"></ion-icon> (800) 555-0123</p></div>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> The Longevity Clinic</p>
+            </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="store.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+
+</html>
