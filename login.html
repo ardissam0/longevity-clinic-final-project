@@ -4,9 +4,9 @@
     <title>The Longevity Clinic</title>
     <!-- 
     Final Draft
-    Filename: results.html 
+    Filename: index.html 
     Author: Samuel Ardis
-    Date: 11/11/2021
+    Date: 10/30/2021
     HTML5 and CSS3 Illustrated Unit A, Final Draft
     -->
     <meta charset="utf-8">
@@ -16,9 +16,9 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header>   
             <div>
-            <h1>The Longevity Clinic</h1>
+                <h1><a href="index.html">The Longevity Clinic</a></h1>
             </div>
               <div>
                 <a href="index.html"><button>HOME</button></a>
@@ -28,6 +28,7 @@
                 <a href="cart.html"><button class="cart">
                     <ion-icon name="cart-outline" class="cart-icon"></ion-icon><span>0</span>
                 </button></a>
+                <a href="login.html"><button>LOGIN</button></a>
             </div>
         </header>
         <div class="wrapper-color-switch">
@@ -37,32 +38,30 @@
             </label>
           </div>
         <hr>
-        <article>
-            <h2>Your form has been submitted</h2>
-               <h3>You entered the following information:</h3>
-         
-               <script>
-                   var formData = location.search;
-                   formData = formData.substring(1, formData.length);
-                   while (formData.indexOf("+") !== -1) {
-                      formData = formData.replace("+", " ");
-                   }
-                   formData = decodeURIComponent(formData);
-                   var formArray = formData.split("&");
-                   for (var i = 0; i < formArray.length; i = i + 1) {
-                      document.write("<p>" + formArray[i] + "</p>");
-                   }
-               </script>
-         </article>
-         <footer>
+        <section class="container content-section">
+            <form>
+                <input type="email" id="email" />
+                <label for="email">Email</label>
+                <br>
+                <input type="password" id="password" />
+                <label for="password">Password</label>
+                <br>
+                <button id="signup-btn">Sign Up</button>
+                <button id="login-btn">Login</button>
+                <button id="logout-btn">Logout</button>
+              </form>
+        </section>
+        <footer>
             <p><ion-icon name="location" class="footer-icon"></ion-icon>123 Grover St. <br/> Los Angeles, CA</p>
             <div class="phone-div"><p><ion-icon name="call" class="footer-icon"></ion-icon> (800) 555-0123</p></div>
             <p>&copy; <script>document.write(new Date().getFullYear())</script> The Longevity Clinic</p>
         </footer>
     </div>
+    <script src="login.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="store.js"></script>
+    <script src="modal.js"></script>
     <script src="darkmode.js"></script>
 </body>
 
