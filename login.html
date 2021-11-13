@@ -39,17 +39,28 @@
           </div>
         <hr>
         <section class="container content-section">
-            <form>
-                <input type="email" id="email" />
-                <label for="email">Email</label>
-                <br>
-                <input type="password" id="password" />
-                <label for="password">Password</label>
-                <br>
-                <button id="signup-btn">Sign Up</button>
-                <button id="login-btn">Login</button>
-                <button id="logout-btn">Logout</button>
-              </form>
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header"> Login</h2>
+                </div>
+
+                <div id="form_content_container">
+                    <div id="form_content_inner_container">
+                        <input type="text" id="full_name" placeholder="Full name">
+                        <input type="email" id="email" placeholder="Email">
+                        <input type="password" id="password" placeholder="New Password">
+
+                        <input type="text" id="favourite_song" placeholder="The Best Song Ever">
+                        <input type="text" id="milk_before_cereal" placeholder="Milk Before Cereal? ( Yes | No )">
+
+                        <div id="button_container">
+                            <button onclick="login()">Login</button>
+                            <button onclick="register()">Register</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </section>
         <footer>
             <p><ion-icon name="location" class="footer-icon"></ion-icon>123 Grover St. <br/> Los Angeles, CA</p>
@@ -57,9 +68,12 @@
             <p>&copy; <script>document.write(new Date().getFullYear())</script> The Longevity Clinic</p>
         </footer>
     </div>
-    <script src="login.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/login.js"></script>
     <script src="./js/store.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/darkmode.js"></script>
