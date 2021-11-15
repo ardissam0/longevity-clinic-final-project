@@ -119,7 +119,8 @@ function displayCart() {
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div class="cart-item">
-                <ion-icon name="close-circle-outline" class="btn-danger" onclick="remove(this)"></ion-icon>
+            <div class="cart-name">
+                <ion-icon name="close-circle-outline" class="btn-danger" onclick="removeItem(this);"></ion-icon>
                 <span>${item.name}</span>
             </div>
             <div class="cart-price">
@@ -131,6 +132,7 @@ function displayCart() {
             <div class="cart-total-price>
                 $${item.inCart * item.price}
             </div>
+            </div>
             `
         });
 
@@ -140,11 +142,24 @@ function displayCart() {
                     Total
                     </h4>
                     <h4 class="basketTotal">
-                    $${cartCost}
+                    $${(Math.round(cartCost * 100) / 100).toFixed(2)}
                     </h4>
             </div>
         `
     }
+}
+
+function removeItem(btn){
+    ((btn.parentNode.parentNode).parentNode).removeChild(btn.parentNode.parentNode);
+}
+
+function purchaseClearStorage() {
+    localStorage.clear();
+    alert("Purchase successful!");
+}
+
+function reload() {
+    reload = location.reload();
 }
 
 onLoadCartNumbers()

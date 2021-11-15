@@ -18,7 +18,7 @@
     <div class="container">
         <header>
             <div>
-                <h1><a href="index.html">The Longevity Clinic</a></h1>
+                <a href="index.html"><img class="logo" src="images/Longevity_Clinic_Logo.png"></a>
             </div>
               <div>
                 <a href="index.html"><button>HOME</button></a>
@@ -28,6 +28,7 @@
                 <a href="cart.html"><button class="cart">
                     <ion-icon name="cart-outline" class="cart-icon"></ion-icon><span>0</span>
                 </button></a>
+                <a href="login.html"><button>LOGIN</button></a>
             </div>
         </header>
         <div class="wrapper-color-switch">
@@ -46,7 +47,7 @@
                     </div>
                     <div class="cart-items">
                     </div>
-                    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+                    <button class="btn btn-primary btn-purchase" type="button" onclick="purchaseClearStorage(); window.location.reload();">PURCHASE</button>
                 </div>
             </section>
             <footer>
