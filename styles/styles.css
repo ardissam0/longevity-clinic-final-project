@@ -13,7 +13,7 @@
 - Add Login functionality to website for members.
                 ---DONE!!!
 - Implement dark mode toggle functionality. 
-          --DONE! with basic functionality/Page doesn't remember upon refresh!
+          --DONE!
 - Add a sample page where you can get a generic workout regimen, nutrition plan, etc.
 
 - Add a page where you can calculate your BMI, caloric needs, etc. 
@@ -784,8 +784,22 @@ table {
   padding: 3%;
   margin-bottom: 3%;
 }
+.table2 {
+  width: 55%;
+  margin: 0 auto;
+  padding: 3%;
+  margin-bottom: 3%;
+}
+@media(max-width: 800px) {
+  .table2 {
+    width: 100%;
+  }
+}
 th, td {
   border: 2px solid var(--clr-primary);
+}
+.regimen-table-body td {
+  font-weight: 525;
 }
 th {
   padding: 0.1em 0.3em;

@@ -154,7 +154,9 @@ function removeItem(btn){
 }
 
 function purchaseClearStorage() {
-    localStorage.clear();
+    localStorage.removeItem("cartNumbers");
+    localStorage.removeItem("productsInCart");
+    localStorage.removeItem("totalCost");
     alert("Purchase successful!");
 }
 
