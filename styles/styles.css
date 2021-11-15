@@ -30,8 +30,6 @@
 
 */
 
-@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
-
  /* reset style */
  a, article, body, div, figcaption, figure, footer, header, h1, 
  h2, h3, img, li, nav, p, section, ol, ul, fieldset, form, legend, 
@@ -79,7 +77,8 @@ header {
   background-color: var(--clr-primary);
   width: 100%;
   top: 0;
-  display: flex; 
+  display: flex;
+  justify-content: space-around;
 }
 header div {
   color: var(--clr-font);
@@ -87,14 +86,14 @@ header div {
   margin: 0 auto 0.8em;
 }
 header .logo {
-  width: 15%;
+  width: 18%;
   filter: brightness(1%);
   padding-top: 15px;
   margin: 0 auto;
 }
 @media(max-width: 1000px) {
   header .logo {
-    width: 25%;
+    width: 35%;
   }
 }
 header h1{
@@ -110,7 +109,6 @@ header button {
   font-weight: bold;
   padding: 5px;
   margin-top: 35px;
-  margin-right: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -131,6 +129,7 @@ header button a {
   header button {
     width: 100%;
     margin-bottom: 10px;
+    margin-top: 0;
     background-color: var(--clr-background);
   }
 }
@@ -140,7 +139,7 @@ header button a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 35px 50px 35px 0px;
+  margin: 15px 30px 15px 0px;
 }
 /* label for switch that is interactive */
 .color-switch {
@@ -167,13 +166,12 @@ header button a {
 /* text label that indicates switch state
 light by default */
 .color-switch::before {
-  font-size: 2.2em;
-  content: "\f4b7";
-  font-family: "Ionicons";
+  font-size: 1em;
+  content: "Light";
   position: absolute;
   display: inline-block;
-  right: 2.1em;
-  bottom: -0.1em;
+  right: 4.9em;
+  bottom: .3em;
 }
 /* animate circle toggle if switch is on */
 #input-color-switch:checked ~ label .color-switch-toggle {
@@ -181,8 +179,7 @@ light by default */
 }
 /* change text of before if switch is on */
 #input-color-switch:checked ~ .color-switch::before {
-  content: "\f468";
-  font-family: "Ionicons";
+  content: "Dark"
 }
 /* hide input */
 #input-color-switch {
@@ -438,6 +435,7 @@ span {
   width: 50px;
   height: 50px;
   border: none;
+  transform: translateZ(0);
   border-radius: 50%;
   background-color: var(--clr-font);
   color: var(--clr-primary);
@@ -495,7 +493,7 @@ span {
 .bmi-calc-form fieldset input {
   margin-bottom: 10px;
   font-weight: bold;
-  width: 6%;
+  width: 8%;
   height: 25px;
   outline: none;
 }
@@ -899,6 +897,11 @@ input {
 #button_container button:hover{
   background-color: var(--clr-font);
   color: var(--clr-background);
+}
+@media(max-width: 800px) {
+  #form_container {
+    width: 95%;
+  }
 }
 
 /* footer section */
