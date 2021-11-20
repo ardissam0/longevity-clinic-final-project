@@ -89,10 +89,10 @@ header nav div.nav-links{
 }
 header nav .logo-div img.logo {
   width: 100px;
+  height: 100px;
   filter: brightness(1%);
   padding-top: 15px;
   padding-left: 30px;
-  margin: 0 auto;
 }
 header nav a button {
   background-color: var(--clr-primary);
