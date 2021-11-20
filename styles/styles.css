@@ -34,7 +34,7 @@
  a, article, body, div, figcaption, figure, footer, header, h1, 
  h2, h3, img, li, nav, p, section, ol, ul, fieldset, form, legend, 
  input, label, textarea, option, select, dl, dt, dd, table, thead, 
- tbody, th, td, span {
+ tbody, th, td, span, video, audio {
     border: 0;
     padding: 0;
     margin: 0;
@@ -73,48 +73,39 @@ a {
 }
 
 /* headings */
-header {
+header nav{
   background-color: var(--clr-primary);
   width: 100%;
   top: 0;
   display: flex;
   justify-content: space-around;
 }
-header div {
+header nav div {
   color: var(--clr-font);
-  width: 70%;
   margin: 0 auto 0.8em;
 }
-header .logo {
-  width: 18%;
+header nav div.nav-links{
+  width: 80%;
+}
+header nav .logo-div img.logo {
+  width: 100px;
   filter: brightness(1%);
   padding-top: 15px;
+  padding-left: 30px;
   margin: 0 auto;
 }
-@media(max-width: 1000px) {
-  header .logo {
-    width: 35%;
-  }
-}
-header h1{
-  padding-top: 10px;
-}
-header h1 a{
-  padding-top: 10px;
-  color: var(--clr-font);;
-}
-header a button {
+header nav a button {
   background-color: var(--clr-primary);
   color: var(--clr-font);
   font-weight: bold;
   padding: 5px;
-  margin-top: 35px;
+  margin-top: 50px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1.1em;
 }
-header a button:hover {
+header nav a button:hover {
   background-color: var(--clr-background);
   color: var(--clr-font);
 }
@@ -133,27 +124,34 @@ header a button:hover {
   margin-left: -2px;
   font-size: .7em;
 }
-@media(max-width: 650px) {
-  header {
+@media(max-width: 800px) {
+  header nav{
     flex-direction: column;
   }
-  header button {
+  header nav .logo-div img.logo {
+    display: flex;
+    margin: 10px auto;
+    padding: 0;
+  }
+  header nav a button, .cart {
     width: 100%;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
     margin-top: 0;
     background-color: var(--clr-background);
   }
 }
 
 /* container that holds the switch */
-.wrapper-color-switch {
+nav .wrapper-color-switch {
+  width: 10%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin: 15px 30px 15px 0px;
 }
 /* label for switch that is interactive */
-.color-switch {
+nav .color-switch {
   width: 4em;
   height: 2em;
   border-radius: 10em;
@@ -163,7 +161,7 @@ header a button:hover {
   cursor: pointer;
 }
 /* circle toggle that animates backward and forward */
-.color-switch-toggle {
+nav .color-switch-toggle {
   width: 1.6em;
   height: 1.6em;
   background: var(--clr-font);
@@ -176,7 +174,7 @@ header a button:hover {
 }
 /* text label that indicates switch state
 light by default */
-.color-switch::before {
+nav .color-switch::before {
   font-size: 1em;
   content: "Light";
   position: absolute;
@@ -185,20 +183,20 @@ light by default */
   bottom: .3em;
 }
 /* animate circle toggle if switch is on */
-#input-color-switch:checked ~ label .color-switch-toggle {
+nav #input-color-switch:checked ~ label .color-switch-toggle {
   transform: translatex(2em);
 }
 /* change text of before if switch is on */
-#input-color-switch:checked ~ .color-switch::before {
+nav #input-color-switch:checked ~ .color-switch::before {
   content: "Dark"
 }
 /* hide input */
-#input-color-switch {
+nav #input-color-switch {
   display: none;
 }
 @media(max-width: 800px) {
-  .wrapper-color-switch {
-    margin: 30px auto 30px 10px;
+  nav .wrapper-color-switch {
+    margin: 30px auto 40px auto;
     justify-content: center;
   }
 }
@@ -318,11 +316,11 @@ ul li {
   padding: .5em;
   border-radius: .3em;
 }
-ul li a:hover {
-  color: var(--clr-secondary);
-}
 ul li a {
   color: var(--clr-primary);
+}
+ul li a:hover {
+  color: var(--clr-font);
 }
 span {
   margin-left: 5px;
@@ -364,7 +362,7 @@ span {
 /* Modal Content/Box */
 .modal-content {
   background-color: var(--clr-background);
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 20px;
   border: 1px solid var(--clr-primary);
   border-radius: 10px;
@@ -397,13 +395,13 @@ span {
 }
 
 /* main content media queries */
-@media(max-width: 1200px) {
+@media(max-width: 1300px) {
   section .product-items .product-item {
-    width: 200px;
+    font-size: .9em;
     margin: 30px auto;
   }
 }
-@media(max-width: 1000px) {
+@media(max-width: 1050px) {
   section {
     width: 90%;
   }
@@ -414,13 +412,13 @@ span {
     margin: 20px auto;
   }
   .modal-content {
-    margin: 50% auto;
+    margin: 15% auto;
     text-align: left;
     width: 75%;
   }
 }
 
-@media(max-width: 750px) {
+@media(max-width: 800px) {
   section {
     width: 90%;
   }
@@ -428,6 +426,9 @@ span {
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
+  }
+  section .product-items .product-item {
+    width: 200px;
   }
   ul {
     flex-direction: column;
@@ -530,6 +531,24 @@ span {
   border: 2px solid var(--clr-background);
   color: var(--clr-background);
 }
+.exercise-form-div {
+  width: 56%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+.exercise-form-div .video{
+  width: 100;
+  height: auto;
+  margin: 20px auto;
+  background-color: var(--clr-primary);
+  padding: 15px;
+  border-radius: 10px;
+}
+.exercise-form-div .video video {
+  width: 100%;
+  height: auto;
+}
 @media(max-width: 800px) {
   #calc-bmi-intro {
     margin: 20px auto;
@@ -538,7 +557,13 @@ span {
   .bmi-calc-form {
     width: 90%;
     padding: 5%;
-  }  
+  }
+  .exercise-form-div {
+    width: 100%;
+  }
+  .exercise-form-div .video{
+    width: 95%;
+  }
 }
 
 /* Cart styles */
@@ -549,7 +574,7 @@ span {
 }
 .cart-section {
   width: 50%;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 .cart-header {
   font-weight: bold;
@@ -641,7 +666,17 @@ span {
 .btn-purchase:hover {
   background-color: var(--clr-font);
 }
-
+@media(max-width: 1400px) {
+  .basketTotalContainer {
+    width: 70%;
+  }
+  .basketTotalTitle {
+    width: 50%;
+  }
+  .basketTotal {
+    width: 10%;
+  }
+  }
 @media(max-width: 800px) {
   .cart-section {
     width: 90%;
@@ -659,13 +694,13 @@ span {
     width: 10%;
   }
   .basketTotalContainer {
-    width: 80%;
+    width: 60%;
   }
   .basketTotalTitle {
     width: 50%;
   }
   .basketTotal {
-    width: 50%;
+    width: 10%;
   }
 }
 

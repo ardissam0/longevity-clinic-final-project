@@ -16,31 +16,34 @@
 </head>
 <body>
     <div class="container">
-        <header>   
-            <div>
-                <a href="index.html"><img class="logo" src="images/Longevity_Clinic_Logo.png"></a>
-            </div>
-              <div>
-                <a href="index.html"><button>HOME</button></a>
-                <a href="about.html"><button>ABOUT</button></a>
-                <a href="calories.html"><button>BMI</button></a>
-                <a href="contact.html"><button>CONTACT</button></a>
-                <a href="login.html"><button>LOGIN</button></a>
-                <a href="cart.html"><button class="cart">
-                    <ion-icon name="cart-outline" class="cart-icon"></ion-icon><span>0</span>
-                </button></a>
-            </div>
-            <div class="wrapper-color-switch">
-                <input type="checkbox" id="input-color-switch">
-                <label for="input-color-switch" class="color-switch">
-                  <div class="color-switch-toggle"></div>
-                </label>
-              </div>
+        <header>
+            <nav>  
+                <div class="logo-div">
+                    <a href="index.html"><img class="logo" src="images/Longevity_Clinic_Logo.png"></a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html"><button>HOME</button></a>
+                    <a href="about.html"><button>ABOUT</button></a>
+                    <a href="calories.html"><button>BMI</button></a>
+                    <a href="contact.html"><button>CONTACT</button></a>
+                    <a href="login.html"><button>LOGIN</button></a>
+                    <a href="cart.html"><button class="cart">
+                        <ion-icon name="cart-outline" class="cart-icon"></ion-icon><span>0</span>
+                    </button></a>
+                </div>
+                <div class="wrapper-color-switch">
+                    <input type="checkbox" id="input-color-switch">
+                    <label for="input-color-switch" class="color-switch">
+                    <div class="color-switch-toggle"></div>
+                    </label>
+                </div>
+            </nav> 
         </header>
         <section class="container content-section">
             <h2 class="section-header">What We Offer</h2>
             <p>Our experts are here to help you live longer, healthier, and happier.</p>
-            <p class="about_p">Click the + to add to your cart!</p>
+            <p>Click the description buttons below to find out more.</p>
+            <p class="about_p">Click the + button to add to your cart!</p>
                 <div class="product-items">
                     <!-- Nutrition Plan -->
                     <div class="product-item">
@@ -48,12 +51,18 @@
                         <h3 class="product-title">Nutrition Plan</h3>
                         <p class="product-price">$49.99</p>
                         <button class="description-modal" data-target="#modal1">Description</button>
-                        <button class="product-item-button" type="button">+</button>
+                        <button class="product-item-button" type="button" title="Add To Cart" onclick="playSound();">+</button>
+                        <audio id="audio" src="https://www.soundjay.com/buttons/sounds/button-30.mp3" preload="auto"></audio>
                     </div>
                     <div class="modal" id="modal1">
                         <div class="modal-content">
                             <span class="close" data-target="#modal1">&times;</span>
                             <h3>Nutrition Plan</h3>
+                            <video width="100%" height="300px" controls autoplay muted loop>
+                                <source src="media/nutrition_video.mp4" type="video/mp4">
+                                Your broswer does not support the video.
+                            </video>
+                            <hr>
                             <p>Our nutrition experts will have a virtual meeting with you to curate the best nutritional plan 
                              based on your specific needs. You will come away with a fully developed meal plan, recipes, calorie 
                              and macro breakdowns, as well as 24/7 support. </p>
@@ -66,12 +75,17 @@
                         <h3 class="product-title">Exercise Plan</h3>
                         <p class="product-price">$49.99</p>
                         <button class="description-modal" data-target="#modal2">Description</button>
-                        <button class="product-item-button" type="button">+</button>
+                        <button class="product-item-button" type="button" title="Add To Cart" onclick="playSound();">+</button>
                     </div>
                     <div class="modal" id="modal2">
                         <div class="modal-content">
                             <span class="close" data-target="#modal2">&times;</span>
                             <h3>Exercise Plan</h3>
+                            <video width="100%" height="300px" controls autoplay muted loop>
+                                <source src="media/exercise_video.mp4" type="video/mp4">
+                                Your broswer does not support the video.
+                            </video>
+                            <hr>
                             <p>Our fitness experts will have a virtual meeting with you to build out an entire workout 
                                 regimen packed with exercises that fit your needs. You will come away with a detailed 
                                 step by step plan to reach your fitness goals and 24/7 support.</p>
@@ -83,14 +97,19 @@
                         <h3 class="product-title">Fasting Regimen</h3>
                         <p class="product-price">$29.99</p>
                         <button class="description-modal" data-target="#modal3">Description</button>
-                        <button class="product-item-button" type="button">+</button>
+                        <button class="product-item-button" type="button" title="Add To Cart" onclick="playSound();">+</button>
                     </div>
                     <div class="modal" id="modal3">
                         <div class="modal-content">
                             <span class="close" data-target="#modal3">&times;</span>
                             <h3>Fasting Regimen</h3>
+                            <video width="100%" height="300px" controls autoplay muted loop>
+                                <source src="media/water_video.mp4" type="video/mp4">
+                                Your broswer does not support the video.
+                            </video>
+                            <hr>
                             <p>Our clinical doctor will have a virtual meeting with you in order to 
-                                assess your medical history before moving forward with a fasting regimen 
+                                assess your medical history before moving forward with a water fast
                                 that will help you shed weight, destory disease, and reset your body. You will come away 
                                 with a detailed fasting regimen as well as 24/7 support from your doctor and our team.</p>
                         </div>
@@ -105,12 +124,17 @@
                     <h3 class="product-title">Success Coach</h3>
                     <p class="product-price">$99.99</p>
                     <button class="description-modal" data-target="#modal4">Description</button>
-                    <button class="product-item-button" type="button">+</button>
+                    <button class="product-item-button" type="button" title="Add To Cart" onclick="playSound();">+</button>
                 </div>
                 <div class="modal" id="modal4">
                     <div class="modal-content">
                         <span class="close" data-target="#modal4">&times;</span>
                         <h3>Success Coach</h3>
+                        <video width="100%" height="300px" controls autoplay muted loop>
+                            <source src="media/sucess_video.mp4" type="video/mp4">
+                            Your broswer does not support the video.
+                        </video>
+                        <hr>
                         <p>Our professional coaches will have a virtual meeting with you to 
                             assess your goals and setbacks in life. They will build a successs 
                             plan for you and guide you where you want to go in life and in health.</p>        
@@ -122,12 +146,17 @@
                     <h3 class="product-title">Counseling Session</h3>
                     <p class="product-price">$99.99</p>
                     <button class="description-modal" data-target="#modal5">Description</button>
-                    <button class="product-item-button" type="button">+</button>
+                    <button class="product-item-button" type="button" title="Add To Cart" onclick="playSound();">+</button>
                 </div>
                 <div class="modal" id="modal5">
                     <div class="modal-content">
                         <span class="close" data-target="#modal5">&times;</span>
                         <h3>Counseling Session</h3>
+                        <video width="100%" height="300px" controls autoplay muted loop>
+                            <source src="media/therapy_video.mp4" type="video/mp4">
+                            Your broswer does not support the video.
+                        </video>
+                        <hr>
                 <p>Our licenses professional counseler will set up a meeting with you in order 
                     to help you through anything that is going on in your life. They will support 
                     you and give you professional advice on how to stay positive.</p>
@@ -139,12 +168,17 @@
                     <h3 class="product-title">Longevity Package</h3>
                     <p class="product-price">$249.99</p>
                     <button class="description-modal" data-target="#modal6">Description</button>
-                    <button class="product-item-button" type="button">+</button>
+                    <button class="product-item-button" type="button" title="Add To Cart" onclick="playSound();">+</button>
                 </div>
                 <div class="modal" id="modal6">
                     <div class="modal-content">
                         <span class="close" data-target="#modal6">&times;</span>
                         <h3>Longevity Package</h3>
+                        <video width="100%" height="300px" controls autoplay muted loop>
+                            <source src="media/longevity_video.mp4" type="video/mp4">
+                            Your broswer does not support the video.
+                        </video>
+                        <hr>
                         <p>This ultimate package combines all of the above. 
                             With a total discount of $80, you will get everything 
                             you need to reach your health and wellness goals.</p>
@@ -164,5 +198,5 @@
     <script src="./js/store.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/darkmode.js"></script>
-
+    <script src="./js/audio.js"></script>
 </html>

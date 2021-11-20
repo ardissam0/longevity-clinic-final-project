@@ -157,6 +157,7 @@ function purchaseClearStorage() {
     localStorage.removeItem("cartNumbers");
     localStorage.removeItem("productsInCart");
     localStorage.removeItem("totalCost");
+    document.getElementById("audio2").play();
     alert("Purchase successful!");
 }
 
