@@ -1,7 +1,7 @@
 /* 
    Filename: styles.css
    Author: Samuel Ardis
-   Date: 11/11/2021
+   Date: 11/19/2021
    HTML5 and CSS3 Illustrated, Final Draft
  */
 
@@ -13,9 +13,9 @@
 - Add Login functionality to website for members.
                 ---DONE!!!
 - Implement dark mode toggle functionality. 
-          --DONE!
+                ---DONE!
 - Add a sample page where you can get a generic workout regimen, nutrition plan, etc.
-
+          --DONE! besides nutrition plan
 - Add a page where you can calculate your BMI, caloric needs, etc. 
           --DONE! Built a BMI calculator, 
 - Add hover description functionality for products. 
@@ -26,7 +26,7 @@
           --DONE! Going to continue making all additions mobile friendly.
 - Create a logo for website
             ---DONE!!!
-- Create user login discounts for being a user
+- Create user login discounts for being a user?
 
 */
 
@@ -51,16 +51,16 @@ a {
 :root {
   --clr-background: #ffffff;
   --clr-font: #000000;
-  --clr-primary: #a29f15;
-  --clr-secondary: #655A7C;
+  --clr-primary: #778DA9;
+  --clr-secondary: #778DA9;
 }
 
 /* darkmode */
 .dark-mode {
   --clr-background: #000000;
   --clr-font: #ffffff;
-  --clr-primary: #655A7C;
-  --clr-secondary: #a29f15;
+  --clr-primary: #778DA9;
+  --clr-secondary: #778DA9;
 }
 
 /* body and page container */
@@ -103,7 +103,7 @@ header h1 a{
   padding-top: 10px;
   color: var(--clr-font);;
 }
-header button {
+header a button {
   background-color: var(--clr-primary);
   color: var(--clr-font);
   font-weight: bold;
@@ -114,13 +114,24 @@ header button {
   cursor: pointer;
   font-size: 1.1em;
 }
-header button:hover {
+header a button:hover {
   background-color: var(--clr-background);
   color: var(--clr-font);
 }
-header button a {
-  text-decoration: none;
-  color: var(--clr-font);
+.cart {
+  position: relative;
+  width: 50px;
+}
+.cart .cart-icon {
+  margin: 0;
+  padding: 0;
+}
+.cart span{
+  position: absolute;
+  top: 0;
+  padding: 0 5px;
+  margin-left: -2px;
+  font-size: .7em;
 }
 @media(max-width: 650px) {
   header {
@@ -600,16 +611,15 @@ span {
   width: 10%;
 }
 .btn-danger {
-  color: white;
-  background-color: #EB5757;
+  color: var(--clr-font);
+  font-size: 2em;
   border: none;
-  border-radius: .3em;
   font-weight: bold;
   cursor: pointer;
   margin: 0;
 }
 .btn-danger:hover {
-  background-color: #CC4C4C;
+  color: #CC4C4C;
 }
 .cart-row:last-child {
   border-bottom: 1px solid black;

@@ -120,7 +120,7 @@ function displayCart() {
             productContainer.innerHTML += `
             <div class="cart-item">
             <div class="cart-name">
-                <ion-icon name="close-circle-outline" class="btn-danger" onclick="removeItem(this);"></ion-icon>
+                <span class="btn-danger" onclick="removeItem(this);">&times;</span>
                 <span>${item.name}</span>
             </div>
             <div class="cart-price">
