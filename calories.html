@@ -41,27 +41,24 @@
         </header>
             <section class="container content-section calc-section">
                 <div class="bmi-calc-form-section">
-                    <h2 id="calc-bmi-intro">BMI (Body Mass Index) Form</h2>
                     <form class="bmi-calc-form" action="none" method="post" name="bmiform">
+                        <h2 id="calc-bmi-intro">BMI Calculator</h2>
                         <fieldset>
-                            <label for="pounds">Weight:</label>
-                            <input type="text" name="pounds" id="pounds"> lbs
-                            <br>
-                            <label for="inches">Height:</label>
-                            <input type="text" name="inches" id="inches"> in
-                            <br>
-                           <button class="bmi-btn" type="button" name="calculate" value="Calculate BMI" onclick="calcBMI()">Calculate</button>
+                            <input type="text" name="pounds" id="pounds" placeholder="ENTER WEIGHT IN POUNDS">
+                            <input type="text" name="inches" id="inches" placeholder="ENTER HEIGHT IN INCHES">
                         </fieldset>
-                        <fieldset>
-                            <label for="bmi" id="bmi_label">Your BMI is:</label>
-                            <input type="text" name="bmi" id="bmi" readonly="readonly">
+                        <br>
+                        <fieldset class="results-bmi">
+                            <button class="bmi-btn" type="button" name="calculate" value="Calculate BMI" onclick="calcBMI()">CALCULATE</button>
+                            <label for="bmi" id="bmi_label"></label>
+                            <input type="text" name="bmi" id="bmi" readonly="readonly" placeholder="CALCULATED BMI">
                         </fieldset>
+                            <br>
                         <div id="bmi-health">
                         </div>
                     </form>
                 </div>
                 <div class="table-section-bmi">
-                    <h2 id="tablestart2">Example Workout Regimen</h2>
                     <table class="table2">
                         <container>
                             <colgroup>
