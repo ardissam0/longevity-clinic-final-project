@@ -40,8 +40,8 @@
             </nav> 
         </header>
             <section class="container content-section calc-section">
-                <div>
-                    <p id="calc-bmi-intro">Calculate your BMI (body mass index) by using the form below.</p>
+                <div class="bmi-calc-form-section">
+                    <h2 id="calc-bmi-intro">BMI (Body Mass Index) Form</h2>
                     <form class="bmi-calc-form" action="none" method="post" name="bmiform">
                         <fieldset>
                             <label for="pounds">Weight:</label>
@@ -60,110 +60,115 @@
                         </div>
                     </form>
                 </div>
-                <h2 id="tablestart2">Example Workout Regimen</ion-icon></h2>
-                <table class="table2">
-                    <container>
-                        <colgroup>
-                            <col span="1" class="table-heading-column">
-                            <col span="2" class="table-data-columns">
-                        </colgroup>
-                    </container>
-                    <thead>
-                        <tr>
-                            <th rowspan="2">Day</th>
-                            <th colspan="2">Type</th>
-                        </tr>
-                        <tr>
-                            <th>Strength</th>
-                            <th>Cardio</th>
-                        </tr>
-                    </thead>
-                    <tbody class="regimen-table-body">
-                        <tr>
-                            <td>Monday</td>
-                            <td>Legs and Abs</td>
-                            <td>1 Mile Run</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Tuesday</td>
-                            <td>Chest, Tri's Bi's</td>
-                            <td>15 Minutes of HIIT</td>
-                        </tr>
-                        <tr>
-                            <td>Wednesday</td>
-                            <td>Back and Abs</td>
-                            <td>1 Mile Run</td>
-                        </tr>
-                        <tr>
-                            <td>Thursday</td>
-                            <td>Legs and Abs</td>
-                            <td>15 Minutes of HIIT</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Friday</td>
-                            <td>Chest, Tri's Bi's</td>
-                            <td>1 Mile Run</td>
-                        </tr>
-                        <tr>
-                            <td>Saturday</td>
-                            <td>Back and Abs</td>
-                            <td>15 Minutes of HIIT</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Sunday</td>
-                            <td>Rest Day</td>
-                            <td>Rest Day</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div>
-                    <h2>Correct Form</h2>
+                <div class="table-section-bmi">
+                    <h2 id="tablestart2">Example Workout Regimen</h2>
+                    <table class="table2">
+                        <container>
+                            <colgroup>
+                                <col span="1" class="table-heading-column">
+                                <col span="2" class="table-data-columns">
+                            </colgroup>
+                        </container>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Day</th>
+                                <th colspan="2">Type</th>
+                            </tr>
+                            <tr>
+                                <th>Strength</th>
+                                <th>Cardio</th>
+                            </tr>
+                        </thead>
+                        <tbody class="regimen-table-body">
+                            <tr>
+                                <td>Monday</td>
+                                <td>Legs and Abs</td>
+                                <td>1 Mile Run</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>Chest, Tri's Bi's</td>
+                                <td>15 Minutes of HIIT</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>Back and Abs</td>
+                                <td>1 Mile Run</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>Legs and Abs</td>
+                                <td>15 Minutes of HIIT</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>Chest, Tri's Bi's</td>
+                                <td>1 Mile Run</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>Back and Abs</td>
+                                <td>15 Minutes of HIIT</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>Rest Day</td>
+                                <td>Rest Day</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="exercise-form-div">
-                    <div class="video">
-                        <h2>Pushup</h2>
-                        <video controls muted loop>
-                            <source src="media/pushup_video.mp4" type="video/mp4">
-                            Your broswer does not support the video.
-                        </video>
+                <div class="video-section-bmi">
+                    <hr>
+                    <div>
+                        <h2>Correct Form Videos</h2>
                     </div>
-                    <div class="video">
-                        <h2>Crunch</h2>
-                        <video controls muted loop>
-                            <source src="media/crunch_video.mp4" type="video/mp4">
-                            Your broswer does not support the video.
-                        </video>
-                    </div>
-                    <div class="video">
-                        <h2>Plank</h2>
-                        <video controls muted loop>
-                            <source src="media/plank_video.mp4" type="video/mp4">
-                            Your broswer does not support the video.
-                        </video>
-                    </div>
-                    <div class="video">
-                        <h2>Bench</h2>
-                        <video controls muted loop>
-                            <source src="media/bench_video.mp4" type="video/mp4">
-                            Your broswer does not support the video.
-                        </video>
-                    </div>
-                    <div class="video">
-                        <h2>Clean</h2>
-                        <video controls muted loop>
-                            <source src="media/overhead_clean_video.mp4" type="video/mp4">
-                            Your broswer does not support the video.
-                        </video>
-                    </div>
-                    <div class="video">
-                        <h2>Meditation</h2>
-                        <video controls muted loop>
-                            <source src="media/meditation_video.mp4" type="video/mp4">
-                            Your broswer does not support the video.
-                        </video>
+                    <div class="exercise-form-div">
+                        <div class="video">
+                            <h2>Pushup</h2>
+                            <video controls muted loop>
+                                <source src="media/pushup_video.mp4" type="video/mp4">
+                                Your broswer does not support the video.
+                            </video>
+                        </div>
+                        <div class="video">
+                            <h2>Crunch</h2>
+                            <video controls muted loop>
+                                <source src="media/crunch_video.mp4" type="video/mp4">
+                                Your broswer does not support the video.
+                            </video>
+                        </div>
+                        <div class="video">
+                            <h2>Plank</h2>
+                            <video controls muted loop>
+                                <source src="media/plank_video.mp4" type="video/mp4">
+                                Your broswer does not support the video.
+                            </video>
+                        </div>
+                        <div class="video">
+                            <h2>Bench</h2>
+                            <video controls muted loop>
+                                <source src="media/bench_video.mp4" type="video/mp4">
+                                Your broswer does not support the video.
+                            </video>
+                        </div>
+                        <div class="video">
+                            <h2>Clean</h2>
+                            <video controls muted loop>
+                                <source src="media/overhead_clean_video.mp4" type="video/mp4">
+                                Your broswer does not support the video.
+                            </video>
+                        </div>
+                        <div class="video">
+                            <h2>Meditation</h2>
+                            <video controls muted loop>
+                                <source src="media/meditation_video.mp4" type="video/mp4">
+                                Your broswer does not support the video.
+                            </video>
+                        </div>
                     </div>
                 </div>
             </section>

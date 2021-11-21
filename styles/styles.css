@@ -202,9 +202,9 @@ nav #input-color-switch {
 
 /* ion icons */
 ion-icon {
-  font-size: 2.25em;
-  margin: 10px auto;
-  margin-bottom: .2em;
+  font-size: 30px;
+  margin: 2px auto;
+  margin-bottom: 3px;
 }
 .contactIcon {
   font-size: 1em;
@@ -230,7 +230,7 @@ article {
   color: var(--clr-font);
   background-color: var(--clr-background);
   text-align: left;
-  width: 75%;
+  width: 65%;
   margin: 0 auto;
   padding: 3em 1em 1em 1em;
 }
@@ -238,12 +238,16 @@ section {
   color: var(--clr-font);
   width: 65%;
   margin: 0 auto;
-  padding: 3em 1em 1em 1em;
   text-align: left;
 }
-article h2, section h2 {
+section h2 {
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+article h2 {
+  margin-bottom: 10px;
+  margin-top: 30px;
   text-align: center;
 }
 article h3, section h3 {
@@ -254,7 +258,7 @@ article p {
   margin: 0 auto;
 }
 article p, section p {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 section .about_p {
   margin: 0 auto;
@@ -263,7 +267,9 @@ section .about_p {
   margin-top: 10px;
 }
 section .section-0 {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 0 auto;
 }
@@ -271,7 +277,7 @@ section .section-0 div{
   display: flex;
   flex-direction: column;
   padding: 25px;
-  margin: 30px;
+  margin: 15px;
   width: 180px;
   color: var(--clr-font);
   border: none;
@@ -281,6 +287,7 @@ section .section-0 div{
 }
 section .product-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 section .product-items .product-item {
@@ -289,7 +296,7 @@ section .product-items .product-item {
   width: 200px;
   height: 200px;
   padding: 20px;
-  margin: 15px 0 0 15px;
+  margin: 20px 20px;
   color: var(--clr-font);
   border: none;
   background-color: var(--clr-primary);
@@ -305,6 +312,7 @@ section .product-items .product-item p{
 }
 ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 2em 0 2em 0;
 }
@@ -404,12 +412,6 @@ span {
   section {
     width: 90%;
   }
-  section .section-0 {
-    flex-direction: column;
-  }
-  section .section-0 div{
-    margin: 20px auto;
-  }
   .modal-content {
     margin: 15% auto;
     text-align: left;
@@ -418,24 +420,15 @@ span {
 }
 
 @media(max-width: 800px) {
-  section {
+  section, article {
     width: 90%;
   }
   section .product-items{
-    flex-direction: column;
     margin: 0 auto;
     align-items: center;
   }
   section .product-items .product-item {
     width: 200px;
-  }
-  ul {
-    flex-direction: column;
-  }
-  ul li {
-    margin: 0 auto;
-    margin-top: 5%;
-    padding: 5% 25% 5% 25%;
   }
 }
 
@@ -463,15 +456,20 @@ span {
 .responsive-iframe {
   position: relative;
   overflow: hidden;
-  width: 51%;
+  width: 50%;
   padding-top: 56.25%;
   border: 10px solid var(--clr-primary);
   border-radius: 10px;
   margin-top: 20px;
 }
+@media(max-width: 1100px) {
+  .responsive-iframe {
+    width: 70%;
+  }
+}
 @media(max-width: 800px) {
   .responsive-iframe {
-    width: 90%;
+    width: 88%;
     height: 150px;
   }
   .container .map-title {
@@ -481,16 +479,34 @@ span {
 
 /* Calculate Page Styles */
 .calc-section {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
   min-height: 100vh;
+  margin: 0 auto;
 }
-#calc-bmi-intro {
+.bmi-calc-form-section {
+  width: 42%;
+  margin: 0 auto;
+}
+.table-section-bmi {
+  width: 42%;
+  margin: 0 auto;
+}
+.video-section-bmi {
+  width: 99%;
+  margin-top: 20px;
+}
+#calc-bmi-intro, #tablestart2 {
   font-weight: bold;
-  margin: 20px auto;
-  width: 50%;
+  margin: 50px auto;
+  margin-bottom: 20px;
 }
 .bmi-calc-form {
-  width: 50%;
-  padding: 2%;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  padding: 15px;
   font-size: 1.15em;
   background-color: var(--clr-primary);
   color: var(--clr-font);
@@ -531,15 +547,15 @@ span {
   color: var(--clr-background);
 }
 .exercise-form-div {
-  width: 56%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  margin: 10px auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .exercise-form-div .video{
-  width: 100;
+  width: 500px;
   height: auto;
-  margin: 20px auto;
+  margin: 20px 20px;
   background-color: var(--clr-primary);
   padding: 15px;
   border-radius: 10px;
@@ -548,14 +564,30 @@ span {
   width: 100%;
   height: auto;
 }
+@media(max-width: 1300px) {
+  .exercise-form-div .video{
+    width: 300px;
+  }
+}
 @media(max-width: 800px) {
-  #calc-bmi-intro {
-    margin: 20px auto;
+  .calc-section {
     width: 90%;
+    flex-direction: column;
+  }
+  .bmi-calc-form-section {
+    width: 100%;
+  }
+  .table-section-bmi {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #tablestart2 {
+    margin-left: 0;
   }
   .bmi-calc-form {
-    width: 90%;
+    width: 85%;
     padding: 5%;
+    margin: 0 auto;
   }
   .exercise-form-div {
     width: 100%;
@@ -567,9 +599,11 @@ span {
 
 /* Cart styles */
 .cart-container {
+  margin: 50px auto;
   border: none;
+  border-radius: 10px;
   padding: 20px;
-  border: 5px solid var(--clr-primary);
+  border: 8px solid var(--clr-primary);
 }
 .cart-section {
   width: 50%;
@@ -707,7 +741,7 @@ span {
 form {
   color: var(--clr-font);
   background-color: var(--clr-primary);
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   padding: 3%;
   margin-bottom: 5%;
@@ -715,7 +749,7 @@ form {
 }
 @media(max-width: 800px) {
   form {
-    width: 100%;
+    width: 90%;
     padding: 5%;
   }
 }
@@ -827,14 +861,13 @@ table {
   margin-bottom: 3%;
 }
 .table2 {
-  width: 55%;
-  margin: 0 auto;
-  padding: 3%;
-  margin-bottom: 3%;
+  width: 100%;
+  border-radius: 10px;
 }
 @media(max-width: 800px) {
   .table2 {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
   }
 }
 th, td {
@@ -858,7 +891,7 @@ td {
 }
 @media(max-width: 800px) {
   table {
-    width: 110%;
+    width: 95%;
   }
 }
 
@@ -870,22 +903,18 @@ td {
   box-shadow: 0 0 50px -20px var(--clr-font);
   border-radius: 10px;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 50px auto;
 }
-
 #form_header_container {
   width: 99%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
   background-color: var(--clr-primary);
 }
-
 #form_header {
   background-color: var(--clr-primary);
 }
-
 #form_content_container {
   width: 100%;
   height: 90%;
@@ -895,13 +924,11 @@ td {
   align-items: center;
   padding-top: 30px;
 }
-
 #form_content_inner_container {
   width: 75%;
   height: 100%;
   float: left;
 }
-
 input {
   width: 80%;
   height: 40px;
@@ -913,14 +940,12 @@ input {
   font-size: 12px;
   border-bottom: 2px solid transparent;
 }
-
 #button_container {
   width: 82%;
   height: 10%;
   color: var(--clr-font);
-  margin: 5px auto 50px auto;
+  margin: 5px auto 80px auto;
 }
-
 #button_container button {
   width: 45%;
   height: 100%;
@@ -977,8 +1002,9 @@ footer p {
 /*About page*/
 .testimonials p {
   border: none;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 30px;
+  border-radius: 10px;
   background-color: var(--clr-primary);
   color: var(--clr-font);
 }
