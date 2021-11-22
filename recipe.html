@@ -4,13 +4,14 @@
     <title>The Longevity Clinic</title>
     <!-- 
     Final Draft
-    Filename: index.html 
+    Filename: recipe.html 
     Author: Samuel Ardis
-    Date: 11/19/2021
+    Date: 11/21/2021
     HTML5 and CSS3 Illustrated Unit A, Final Draft
     -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
     <script src="modernizr.custom.62074.js"></script>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
@@ -40,43 +41,33 @@
                 </div>
             </nav> 
         </header>
-        <section class="container content-section">
-            <div id="form_container">
-                <div id="form_header_container">
-                    <h2 id="form_header">Member Login</h2>
-                </div>
-                <div id="form_content_container">
-                    <div id="form_content_inner_container">
-                        <input type="text" id="full_name" placeholder="Full name">
-                        <input type="email" id="email" placeholder="Email">
-                        <input type="password" id="password" placeholder="New Password">
-
-                        <input type="text" id="favourite_song" placeholder="The Best Song Ever">
-                        <input type="text" id="milk_before_cereal" placeholder="Milk Before Cereal? ( Yes | No )">
-
-                        <div id="button_container">
-                            <button onclick="login()">Login</button>
-                            <button onclick="register()">Register</button>
-                        </div>
+        <section class="container content-section recipe-section">
+                    <!-- Search Box -->
+                    <div class="search-container initial">
+                        <form class="search-form-recipe">
+                            <input class="search-input" type="text" placeholder="Search Recipe's">
+                            <button>SEARCH</button>
+                        </form>
+                        <hr>
+                        <div class="search-result">Use our recipe finder to see get a detailed look at the foods you want to eat. Type in almost anything that comes to mind and you will find something you like!</div>
                     </div>
-                </div>
-            </div>
         </section>
-        <footer>
-            <p><ion-icon name="location" class="footer-icon"></ion-icon>123 Grover St. <br/> Los Angeles, CA</p>
-            <div class="phone-div"><p><ion-icon name="call" class="footer-icon"></ion-icon> (800) 555-0123</p></div>
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> The Longevity Clinic</p>
+        <footer class="recipe-footer">
+            <div class="recipe-footer-separator">
+                <p><ion-icon name="location" class="footer-icon"></ion-icon>123 Grover St. Los Angeles, CA</p>
+                <div class="phone-div"><p><ion-icon name="call" class="footer-icon"></ion-icon> (800) 555-0123</p></div>
+            </div>
+            <div class="recipe-footer-separator2">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> The Longevity Clinic</p>
+                <div id="edamam-badge" data-color="white"></div>
+            </div>
         </footer>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+</body>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/recipeSearch.js"></script>
     <script src="./js/store.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/darkmode.js"></script>
-</body>
-
-</html>
+    <script src="./js/audio.js"></script>

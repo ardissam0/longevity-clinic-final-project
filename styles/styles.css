@@ -6,28 +6,7 @@
  */
 
 /* Ideas for Final: 
-- Add shopping cart functionality using HTML, CSS, and JS. 
-          --DONE! with basic functionality/Cannot really delete, but you can see it removed on screen. 
-- Add google maps functionality to find address of imaginary company.
-                ---DONE!!!
-- Add Login functionality to website for members.
-                ---DONE!!!
-- Implement dark mode toggle functionality. 
-                ---DONE!
-- Add a sample page where you can get a generic workout regimen, nutrition plan, etc.
-          --DONE! besides nutrition plan
-- Add a page where you can calculate your BMI, caloric needs, etc. 
-          --DONE! Built a BMI calculator, 
-- Add hover description functionality for products. 
-                ---DONE!!!
-- Redo color scheme.
-          --DONE!! I like it for now.
-- Make completely mobile friendly.
-          --DONE! Going to continue making all additions mobile friendly.
-- Create a logo for website
-            ---DONE!!!
-- Create user login discounts for being a user?
-
+- 
 */
 
  /* reset style */
@@ -49,7 +28,7 @@ a {
 
 /*lightmode */
 :root {
-  --clr-background: #ffffff;
+  --clr-background: #F8F8FF;
   --clr-font: #000000;
   --clr-primary: #778DA9;
   --clr-secondary: #778DA9;
@@ -58,7 +37,7 @@ a {
 /* darkmode */
 .dark-mode {
   --clr-background: #000000;
-  --clr-font: #ffffff;
+  --clr-font: #F8F8FF;
   --clr-primary: #778DA9;
   --clr-secondary: #778DA9;
 }
@@ -138,6 +117,13 @@ header nav a button:hover {
     margin-bottom: 15px;
     margin-top: 0;
     background-color: var(--clr-background);
+    border-radius: 5px;
+  }
+  header nav a button:hover {
+    border: none;
+  }
+  header nav a button:active {
+    transform: scale(.97);
   }
 }
 
@@ -231,12 +217,14 @@ article {
   background-color: var(--clr-background);
   text-align: left;
   width: 65%;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 3em 1em 1em 1em;
 }
 section {
   color: var(--clr-font);
   width: 65%;
+  min-height: 100vh;
   margin: 0 auto;
   text-align: left;
 }
@@ -622,6 +610,214 @@ span {
   .bmi-calc-form #bmi-health {
     width: 65%;
     height: 90px;
+  }
+}
+
+/* Recipe Styles */
+.recipe-section {
+  width: 80%;
+}
+.search-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+}
+.search-form-recipe {
+  width: 90%;
+  margin: 50px auto 20px auto;
+  background-color: var(--clr-primary);
+}
+.search-container.initial .search-form-recipe input.search-input {
+  width: 60%;
+  margin: 0 auto;
+  margin-right: 20px;
+  height: 0px;
+  border-radius: 4px;
+  outline: none;
+  background-color: var(--clr-background);
+  font-size: 1rem;
+}
+.search-container .search-form-recipe input.search-input {
+  width: 55%;
+  margin: 0 auto;
+  margin-right: 20px;
+  border-radius: 4px;
+  outline: none;
+  background-color: var(--clr-background);
+  font-size: 1rem;
+}
+.search-form-recipe button {
+  width: 12%;
+  height: 42px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--clr-background);
+  color: var(--clr-font);
+}
+.search-result {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap: 65px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+.item {
+  margin: 0 auto;
+  width: 95%;
+  height: 450px;
+  border-radius: 8px;
+  background-color: var(--clr-primary);
+  padding: 15px;
+  position: relative;
+}
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.search-result .title {
+  width: 95%;
+  color: var(--clr-font);
+  height: 18px;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  bottom: 48%;
+}
+.view-btn {
+  position: absolute;
+  top: 32%;
+  left: 13%;
+  text-decoration: none;
+  text-align: center;
+  width: 75%;
+  padding: 5px 0;
+  background-color: var(--clr-background);
+  opacity: 90%;
+  color: var(--clr-font);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: 0.7s;
+}
+.view-btn:hover {
+  background-color: var(--clr-font);
+  color: var(--clr-background);
+  transform: scale(1.1);
+}
+.recipe-data-div {
+  height: 190px;
+  width: 88%;
+  margin: 15px auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 5px;
+  margin-left: 5px;
+  background-color: var(--clr-background);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+}
+.item-data {
+  color: var(--clr-font);
+  display: flex;
+  text-align: left;
+  margin-top: 10px;
+  font-size: .9em;
+  padding: 5px;
+  letter-spacing: 0.05rem;
+  line-height: 2em;
+}
+.item-data-calories {
+  position: absolute;
+  top: 6%;
+  left: 65%;
+  font-weight: bold;
+  background-color: #000000;
+  opacity: 70%;
+  padding: 8px;
+  border-radius: 5px;
+  color: #F8F8FF;
+}
+.nutrient-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+.nutrient-list li {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  width: 38%;
+  background-color: var(--clr-font);
+  color: var(--clr-background);
+  margin: 5px;
+}
+.search-container.initial .search-form-recipe {
+  max-width: 800px;
+}
+.search-container.initial .search-form-recipe input {
+  padding: 20px;
+  font-size: 3rem;
+}
+
+@media (max-width: 800px) {
+  .item {
+    width: 87%;
+    margin: 10px auto;
+  }
+  .search-result {
+    grid-gap: 10px;
+  }
+  .search-container.initial .search-form-recipe, .search-container .search-form-recipe  {
+    max-width: 100%;
+  }
+  .search-container.initial .search-form-recipe input, .search-container .search-form-recipe input {
+    padding: 15px;
+    font-size: 1rem;
+  }
+ .search-container .search-form-recipe input {
+   height: 4px;
+  }
+  .search-container.initial .search-form-recipe button, .search-container .search-form-recipe button {
+    width: 25%;
+    height: 30px;
+  }
+  .item-data-calories {
+    top: 5%;
+    left: 58%;
+  }
+  .nutrient-list li {
+    width: 90%;
+  }
+}
+@media (max-width: 520px) {
+  .item-data-calories {
+    top: 5%;
+    left: 60%;
+  }
+  input.search-input {
+    margin: 0 auto !important;
+    width: 80% !important;
+   }
+  .search-container.initial .search-form-recipe button, .search-container .search-form-recipe button {
+    width: 90%;
+    height: 30px;
+    margin-top: 15px;
   }
 }
 
@@ -1016,6 +1212,20 @@ footer {
   margin-top: 3em;
   display: flex;
 }
+#edamam-badge {
+  margin-top: 20px;
+}
+.recipe-footer{
+  width: 100%;
+}
+.recipe-footer-separator {
+  display: flex;
+  width: 45%;
+}
+.recipe-footer-separator2 {
+  display: flex;
+  width: 45%;
+}
 .resultFooter {
   position: fixed;
   bottom: 0;
@@ -1025,8 +1235,27 @@ footer p {
   margin: 25px auto;
   text-align: center;
 }
+@media(max-width: 800px) {
+  .recipe-footer {
+    flex-direction: column;
+  }
+  .recipe-footer-separator {
+    display: inline-block;
+    width: 100%;
+  }
+  .recipe-footer-separator2 {
+    display: inline-block;
+    width: 100%;
+  }
+  #edamam-badge {
+    margin-bottom: 20px;
+  }
+}
 @media(max-width: 550px) {
   footer {
+    flex-direction: column;
+  }
+  .recipe-footer {
     flex-direction: column;
   }
 }
