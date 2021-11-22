@@ -224,7 +224,6 @@ article {
 section {
   color: var(--clr-font);
   width: 65%;
-  min-height: 100vh;
   margin: 0 auto;
   text-align: left;
 }
@@ -615,6 +614,7 @@ span {
 
 /* Recipe Styles */
 .recipe-section {
+  min-height: 100vh;
   width: 80%;
 }
 .search-container {
@@ -983,6 +983,7 @@ form {
   }
 }
 
+/* Contact section */
 /* fieldset styles */
 fieldset {
   margin-bottom: 1em;
