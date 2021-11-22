@@ -797,6 +797,9 @@ span {
     width: 25%;
     height: 30px;
   }
+  .recipe-data-div {
+    width: 82%;
+  }
   .item-data-calories {
     top: 5%;
     left: 58%;
