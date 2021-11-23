@@ -188,9 +188,11 @@ nav #input-color-switch {
 
 /* ion icons */
 ion-icon {
-  font-size: 30px;
-  margin: 2px auto;
-  margin-bottom: 3px;
+  font-size: 35px;
+  margin: 2px auto 3px auto;
+}
+.product-icon {
+  margin: 0 auto;
 }
 .contactIcon {
   font-size: 1em;
@@ -280,6 +282,7 @@ section .product-items {
 section .product-items .product-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   width: 200px;
   height: 200px;
   padding: 20px;
@@ -292,10 +295,11 @@ section .product-items .product-item {
   position: relative;
 }
 section .product-items .product-item h3{
-  font-size: 1.5em;
+  font-size: 22px;
 }
 section .product-items .product-item p{
-  font-size: 1.3em;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 ul {
   display: flex;
@@ -324,14 +328,14 @@ span {
 /* Modal styles */
 .description-modal {
   color: var(--clr-primary);
-  font-size: 1em;
+  font-size: 1.2em;
   background-color: var(--clr-font);
   cursor: pointer;
   border: none;
   border-radius: 5px;
   width: 55%;
-  padding: 3px 0 3px 0;
-  margin: 20px auto;
+  padding: 4px 0 4px 0;
+  margin: 5px auto;
   transition: 0.3s;
 }
 .description-modal:hover {
@@ -426,7 +430,7 @@ span {
   width: 55px;
   height: 55px;
   border: none;
-  border-radius: 200px;
+  border-radius: 50%;
   transform: translateZ(0);
   background-color: var(--clr-font);
   color: var(--clr-primary);
@@ -442,11 +446,8 @@ span {
   transition-timing-function: ease-in;
 }
 .product-item-button p {
-  text-align: center;
-  position: fixed;
-  top: 4px;
-  right: 15px;
-  padding-bottom: 3px;
+  font-size: 40px !important;
+  margin: 0 !important;
 }
 .responsive-iframe {
   position: relative;
