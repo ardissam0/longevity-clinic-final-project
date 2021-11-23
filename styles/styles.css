@@ -446,6 +446,7 @@ span {
   position: fixed;
   top: 7px;
   right: 17px;
+  padding-bottom: 3px;
 }
 .responsive-iframe {
   position: relative;
