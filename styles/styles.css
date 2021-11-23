@@ -421,7 +421,7 @@ span {
 
 /* product styles */
 .product-item-button {
-  font-size: 2em;
+  font-size: 32px;
   margin: 0 auto;
   width: 55px;
   height: 55px;
@@ -469,10 +469,6 @@ span {
   }
   .container .map-title {
     margin-top: 30px;
-  }
-  .product-item-button p {
-    top: 7px;
-    right: 17px;
   }
 }
 
@@ -567,7 +563,7 @@ span {
   justify-content: space-around;
 }
 .exercise-form-div .video{
-  width: 500px;
+  width: 450px;
   height: auto;
   margin: 20px 20px;
   background-color: var(--clr-primary);
@@ -583,7 +579,16 @@ span {
 }
 @media(max-width: 1300px) {
   .exercise-form-div .video{
+    width: 375px;
+  }
+}
+@media(max-width: 1100px) {
+  .exercise-form-div .video{
     width: 300px;
+  }
+  .bmi-calc-form #bmi-health {
+    width: 185px;
+    height: 90px;
   }
 }
 @media(max-width: 700px) {
@@ -614,10 +619,6 @@ span {
   }
   .exercise-form-div .video{
     width: 95%;
-  }
-  .bmi-calc-form #bmi-health {
-    width: 65%;
-    height: 90px;
   }
 }
 
