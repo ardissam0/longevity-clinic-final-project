@@ -466,6 +466,9 @@ span {
   .product-item-button {
     width: 23.5%;
     height: 23.5%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     border: none;
     border-radius: 50%;
   }
