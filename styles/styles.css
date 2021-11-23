@@ -426,7 +426,7 @@ span {
   width: 55px;
   height: 55px;
   border: none;
-  border-radius: 50%;
+  border-radius: 200px;
   transform: translateZ(0);
   background-color: var(--clr-font);
   color: var(--clr-primary);
