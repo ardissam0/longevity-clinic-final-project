@@ -443,8 +443,9 @@ span {
 }
 .product-item-button p {
   text-align: center;
-  margin: 0 auto;
-  font-size: 1em;
+  position: fixed;
+  top: 7px;
+  right: 17px;
 }
 .responsive-iframe {
   position: relative;
@@ -467,13 +468,6 @@ span {
   }
   .container .map-title {
     margin-top: 30px;
-  }
-  .product-item-button {
-    width: 24%;
-    height: 24%;
-    text-align: center;
-    border: none;
-    border-radius: 50%;
   }
 }
 
