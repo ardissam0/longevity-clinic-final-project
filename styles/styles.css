@@ -430,6 +430,7 @@ span {
   transform: translateZ(0);
   background-color: var(--clr-font);
   color: var(--clr-primary);
+  text-align: center;
   cursor: pointer;
   position: absolute;
   top: -5%;
