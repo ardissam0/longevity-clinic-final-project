@@ -444,6 +444,7 @@ span {
 .product-item-button p {
   text-align: center;
   position: fixed;
+  margin: 0 auto;
   top: 4px;
   right: 15px;
   padding-bottom: 3px;
