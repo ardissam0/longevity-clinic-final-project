@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+// Firebase configuration
 const firebaseConfig = {
    apiKey: "AIzaSyDUSqr6HWl9PE4aIX5PvfW7oc533ZG1KBg",
    authDomain: "longevity-website-final.firebaseapp.com",
@@ -13,30 +13,30 @@ const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.database();
 
-// Set up our register function
+// Set up register function
 function register () {
-    // Get all our input fields
+    // Get all input fields
     email = document.getElementById('email').value
     password = document.getElementById('password').value
     full_name = document.getElementById('full_name').value
-    favourite_song = document.getElementById('favourite_song').value
-    milk_before_cereal = document.getElementById('milk_before_cereal').value
+    favorite_food = document.getElementById('favorite_food').value
+    morning_person = document.getElementById('morning_person').value
   
     // Validate input fields
     if (validate_email(email) == false || validate_password(password) == false) {
-      alert('Email or Password is Outta Line!!')
+      alert('Email or Password is Incorrect!')
       return
       // Don't continue running the code
     }
-    if (validate_field(full_name) == false || validate_field(favourite_song) == false || validate_field(milk_before_cereal) == false) {
-      alert('One or More Extra Fields is Outta Line!!')
+    if (validate_field(full_name) == false || validate_field(favorite_food) == false || validate_field(morning_person) == false) {
+      alert('One or More Extra Fields is Out of Line!!')
       return
     }
    
-    // Move on with Auth
+    // Auth
     auth.createUserWithEmailAndPassword(email, password)
     .then(function() {
-      // Declare user variable
+      // Declared user variable
       var user = auth.currentUser
   
       // Add this user to Firebase Database
@@ -46,15 +46,14 @@ function register () {
       var user_data = {
         email : email,
         full_name : full_name,
-        favourite_song : favourite_song,
-        milk_before_cereal : milk_before_cereal,
+        favorite_food : favorite_food,
+        morning_person : morning_person,
         last_login : Date.now()
       }
   
       // Push to Firebase Database
       database_ref.child('users/' + user.uid).set(user_data)
   
-      // DOne
       alert('User Created!!')
     })
     .catch(function(error) {
@@ -66,9 +65,9 @@ function register () {
     })
   }
   
-  // Set up our login function
+  // Set up login function
   function login () {
-    // Get all our input fields
+    // Get all input fields
     email = document.getElementById('email').value
     password = document.getElementById('password').value
   
@@ -84,7 +83,7 @@ function register () {
       // Declare user variable
       var user = auth.currentUser
   
-      // Add this user to Firebase Database
+      // Add user to Firebase Database
       var database_ref = database.ref()
   
       // Create User data
@@ -95,12 +94,10 @@ function register () {
       // Push to Firebase Database
       database_ref.child('users/' + user.uid).update(user_data)
   
-      // DOne
       alert('User Logged In!!')
   
     })
     .catch(function(error) {
-      // Firebase will use this to alert of its errors
       var error_code = error.code
       var error_message = error.message
   
@@ -124,7 +121,6 @@ function register () {
   }
   
   function validate_password(password) {
-    // Firebase only accepts lengths greater than 6
     if (password < 6) {
       return false
     } else {
