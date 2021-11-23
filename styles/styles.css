@@ -429,7 +429,6 @@ span {
   height: 55px;
   border: none;
   border-radius: 50%;
-  /* transform: translateZ(0); */
   background-color: var(--clr-font);
   color: var(--clr-primary);
   text-align: center;
@@ -446,6 +445,7 @@ span {
 .product-item-button p {
   font-size: 40px !important;
   margin: 0 auto !important;
+  padding: 0 !important;
 }
 .responsive-iframe {
   position: relative;
@@ -468,6 +468,10 @@ span {
   }
   .container .map-title {
     margin-top: 30px;
+  }
+  .product-item-button {
+    width: 58px;
+    height: 58px;
   }
 }
 
@@ -658,6 +662,7 @@ span {
 .search-form-recipe button {
   width: 12%;
   height: 42px;
+  font-size: 1.05rem;
   font-weight: bold;
   cursor: pointer;
   border: none;
