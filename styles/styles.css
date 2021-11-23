@@ -444,7 +444,6 @@ span {
 .product-item-button p {
   text-align: center;
   position: fixed;
-  margin: 0 auto;
   top: 4px;
   right: 15px;
   padding-bottom: 3px;
@@ -809,6 +808,8 @@ span {
     height: 30px;
   }
   .recipe-data-div {
+    left: 20px;
+    bottom: 8px;
     width: 82%;
   }
   .item-data-calories {
