@@ -290,7 +290,7 @@ section .product-items .product-item {
   color: var(--clr-font);
   border: none;
   background-color: var(--clr-primary);
-  border-radius: 10%;
+  border-radius: 20px;
   text-align: center;
   position: relative;
 }
@@ -333,7 +333,7 @@ span {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  width: 55%;
+  width: 60%;
   padding: 4px 0 4px 0;
   margin: 5px auto;
   transition: 0.3s;
@@ -425,13 +425,11 @@ span {
 
 /* product styles */
 .product-item-button {
-  font-size: 32px;
-  margin: 0 auto;
   width: 55px;
   height: 55px;
   border: none;
   border-radius: 50%;
-  transform: translateZ(0);
+  /* transform: translateZ(0); */
   background-color: var(--clr-font);
   color: var(--clr-primary);
   text-align: center;
@@ -447,7 +445,7 @@ span {
 }
 .product-item-button p {
   font-size: 40px !important;
-  margin: 0 !important;
+  margin: 0 auto !important;
 }
 .responsive-iframe {
   position: relative;
