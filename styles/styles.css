@@ -464,13 +464,14 @@ span {
     margin-top: 30px;
   }
   .product-item-button {
-    width: 23.5%;
-    height: 23.5%;
-    align-items: center;
+    width: 24%;
+    height: 24%;
     text-align: center;
-    justify-content: center;
     border: none;
     border-radius: 50%;
+  }
+  .product-item-button p {
+    text-align: center;
   }
 }
 
