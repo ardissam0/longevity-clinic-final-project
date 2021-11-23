@@ -417,9 +417,6 @@ span {
     margin: 0 auto;
     align-items: center;
   }
-  section .product-items .product-item {
-    width: 200px;
-  }
 }
 
 /* product styles */
@@ -466,6 +463,9 @@ span {
   }
   .container .map-title {
     margin-top: 30px;
+  }
+  .product-item-button {
+    height: 50px;
   }
 }
 
