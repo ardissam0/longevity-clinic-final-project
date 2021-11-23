@@ -444,8 +444,8 @@ span {
 .product-item-button p {
   text-align: center;
   position: fixed;
-  top: 7px;
-  right: 17px;
+  top: 4px;
+  right: 15px;
   padding-bottom: 3px;
 }
 .responsive-iframe {
@@ -469,6 +469,10 @@ span {
   }
   .container .map-title {
     margin-top: 30px;
+  }
+  .product-item-button p {
+    top: 7px;
+    right: 17px;
   }
 }
 
