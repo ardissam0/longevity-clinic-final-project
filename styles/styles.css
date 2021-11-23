@@ -430,6 +430,8 @@ span {
   height: 50px;
   border: none;
   transform: translateZ(0);
+  -webkit-border-radius: 50%/50%;
+  -moz-border-radius: 50%/50%;
   border-radius: 50%/50%;
   background-color: var(--clr-font);
   color: var(--clr-primary);
