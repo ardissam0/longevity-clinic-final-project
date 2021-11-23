@@ -441,6 +441,11 @@ span {
   transition: .5s;
   transition-timing-function: ease-in;
 }
+.product-item-button p {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1em;
+}
 .responsive-iframe {
   position: relative;
   overflow: hidden;
@@ -469,11 +474,6 @@ span {
     text-align: center;
     border: none;
     border-radius: 50%;
-  }
-  .product-item-button p {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 1em;
   }
 }
 
